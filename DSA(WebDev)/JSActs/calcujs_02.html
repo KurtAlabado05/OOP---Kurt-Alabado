@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+    <title>Calculator</title>
+</head>
+<body>
+    <form name = "frm">
+        Enter 1st Number:
+        <input type ="number" name="n1" required><br>
+        Enter 2nd Number:
+        <input type ="number" name="n2" required><hr>
+        <input type="button" value="Add" onClick="add()"> 
+        <input type="button" value="Subtract" onClick="sub()">
+        <input type="button" value="Multiply" onClick="multi()">
+        <input type="button" value="Divide" onClick="div()">
+    </form>
+    <script>
+        function add() {
+            num1 = frm.n1.value;
+            num2 = frm.n2.value;
+            total = num1 + num2;
+            window.alert("The total is: " + total);
+        }
+        function sub() {
+            num1 = frm.n1.value;
+            num2 = frm.n2.value;
+            total = num1 - num2;
+            window.alert("The total is: " + total);
+        }
+        function multi() {
+            num1 = frm.n1.value;
+            num2 = frm.n2.value;
+            total = num1 * num2;
+            window.alert("The total is: " + total);
+        }
+        function div() {
+            num1 = frm.n1.value;
+            num2 = frm.n2.value;
+            total = num1 / num2;
+            window.alert("The total is: " + total);
+        }
+
+    </script>
+</body>
+</html>

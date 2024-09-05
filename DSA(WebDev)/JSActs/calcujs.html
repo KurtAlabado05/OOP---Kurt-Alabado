@@ -1,0 +1,50 @@
+<script>
+    function calculate() {
+        n1 = parseFloat(window.prompt("Enter First Number:",""));
+    while (isNaN(n1)) {
+        window.alert("Error! Please enter a valid number.");
+        n1 = parseFloat(window.prompt("Enter First Number:",""));
+    }
+        n2 = parseFloat(window.prompt("Enter Second Number:",""));
+    while (isNaN(n2)) {
+        window.alert("Error! Please enter a valid number.");
+        n2 = parseFloat(window.prompt("Enter Second Number:",""));
+    }
+        op = window.prompt("Select operation: + for addition, - for subtraction, * for multiplication, / for division ","");
+        
+        switch (op) {
+            case "+":
+                result = n1 + n2;
+                break;
+            case "-":
+                result = n1 - n2;
+                break;
+            case "*":
+                result = n1 * n2;
+                break;
+            case "/":
+                if (n2 != 0) {
+                    result = n1 / n2;
+                } else {
+                    window.alert("Error! Division by zero is not allowed.");
+                    calculate();
+                    return;
+                }
+                break;
+            default:
+                window.alert("Wrong input! Type in + ,- ,* , or / to pick operation.");
+                calculate();
+                return;
+        }
+        
+        window.alert("Total: " + result);
+        
+        var response = window.prompt("Do you want to calculate another set of numbers? (y/n)");
+        if (response.toLowerCase() == "y") {
+            calculate();
+        }
+    }
+    
+    calculate();
+</script>
+
